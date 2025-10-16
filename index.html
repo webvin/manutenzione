@@ -6,41 +6,38 @@
   <title>Sito in manutenzione – Tutela Paesaggio Sardegna</title>
   <meta name="robots" content="noindex,nofollow">
   <style>
-    :root{
-      --bg:#ffffff; --fg:#333; --muted:#666; --gear:#24597a;
-      --shadow: 0 10px 30px rgba(0,0,0,.07);
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff;
+      color: #333333;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+      text-align: center;
+      padding: 2rem;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; display:flex; align-items:center; justify-content:center;
-      background:var(--bg); color:var(--fg);
-      font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+    main {
+      max-width: 600px;
     }
-    .wrap{max-width:720px; padding:32px; text-align:center}
-    .logo{width:140px; height:140px; margin:0 auto 18px; filter:drop-shadow(var(--shadow))}
-    .gear{width:140px; height:140px; display:block; margin:0 auto}
-    .spin{animation:spin 3s linear infinite; transform-origin:50% 50%}
-    @keyframes spin{to{transform:rotate(360deg)}}
-    @media (prefers-reduced-motion: reduce){ .spin{animation:none} }
-
-    h1{font-size:clamp(22px,3vw,30px); margin:8px 0 6px; color:#444}
-    p{font-size:clamp(16px,2.2vw,18px); margin:0 0 10px}
-    .muted{color:var(--muted)}
+    h1 {
+      font-size: clamp(22px, 3vw, 30px);
+      color: #444444;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: clamp(16px, 2vw, 18px);
+      line-height: 1.6;
+      margin: 0;
+    }
   </style>
 </head>
 <body>
-  <main class="wrap" role="main" aria-live="polite">
-    <!-- Ingranaggio semplice monocolore -->
-    <div class="logo" aria-hidden="true">
-      <svg class="gear spin" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img">
-        <path fill="var(--gear)" d="M56.9 6.5l2.1 8.2a32.1 32.1 0 0 1 8.9 4.1l7.5-4 7.3 12.7-6.9 4.8a32.1 32.1 0 0 1 1.4 9.7l7.8 2.8-4.6 14.1-8.1-1.2a32.3 32.3 0 0 1-7.5 7.5l3.4 7.7-12.7 7.3-5.1-6.9a32.2 32.2 0 0 1-9.8 1.4l-3 8-14.1-4.7 1.4-8.1a32 32 0 0 1-7.7-7.3l-8 3.4-7.3-12.7 7.1-5.2a32 32 0 0 1-1.1-9.7l-8.4-2.8 4.7-14.1 8.4 1.2a32 32 0 0 1 7.1-7.6l-3.6-7.8L39 5l5.3 7c3.5-.6 6.9-.6 12.6-.9zM50 33a17 17 0 1 0 0 34 17 17 0 0 0 0-34z"/>
-      </svg>
-    </div>
-
+  <main>
     <h1>Sito in manutenzione</h1>
-    <p>Stiamo lavorando per migliorare il servizio.<br>Si invita a riprovare più tardi.</p>
-    <p class="muted">Dominio: <strong>www.tutelapaesaggiosardegna.info</strong></p>
+    <p>Stiamo lavorando per migliorare il servizio.<br>
+    La invitiamo a riprovare più tardi.</p>
   </main>
 </body>
 </html>
