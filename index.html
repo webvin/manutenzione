@@ -12,10 +12,10 @@
 
   <style>
     :root {
-      --primary-color: #2b5a83;   /* colore blu istituzionale */
+      --primary-color: #2b5a83;
       --text-color: #333333;
       --bg-color: #ffffff;
-      --raise: -10vh; /* alzare/abbassare il blocco */
+      --raise: -10vh;
     }
 
     body {
@@ -36,7 +36,6 @@
       transform: translateY(var(--raise));
     }
 
-    /* Logo */
     .logo {
       width: 80px;
       height: auto;
@@ -87,44 +86,36 @@
     }
 
     .mail {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
       text-decoration: none;
       color: var(--primary-color);
-      margin-left: 0.5rem;
       transition: color 0.3s ease;
     }
-
     .mail:hover {
       color: #1a3c57;
     }
-
     .mail-icon {
       font-family: 'Material Symbols Outlined';
-      font-size: 18px;
+      font-size: 22px;
       vertical-align: middle;
     }
   </style>
 </head>
 <body>
   <main>
-    <!-- Logo sopra il titolo -->
     <img src="LogoTPSdiVP_alfa.png" alt="Logo Tutela Paesaggio Sardegna" class="logo">
 
     <h1>Tutela Paesaggio Sardegna</h1>
     <span class="icon" aria-hidden="true">settings</span>
     <h2>Sito in manutenzione</h2>
 
-    <p>Stiamo effettuando alcuni aggiornamenti per offrirle un servizio sempre migliore.<br>
-    Il sito tornerà disponibile a breve.</p>
+    <p>Stiamo effettuando alcuni aggiornamenti per offrirle un servizio più performate ed efficiente.<br><br>
+    Il sito tornerà disponibile a breve.<br><br> Grazie per la comprensione!</p>
 
     <footer>
       Tutela Paesaggio Sardegna<br>
       diVP © 2025
-      <a class="mail" href="mailto:tutelapaesaggiosardegna@gmail.com">
+      <a class="mail" href="mailto:tutelapaesaggiosardegna@gmail.com" title="Invia un'email">
         <span class="mail-icon">mail</span>
-        tutelapaesaggiosardegna@gmail.com
       </a>
     </footer>
   </main>
