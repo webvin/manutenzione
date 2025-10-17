@@ -41,8 +41,8 @@
       width: 80px;
       height: auto;
       margin-bottom: 1rem;
-      opacity: 0.85;     
-      transition: opacity 0.5s ease; 
+      opacity: 0.85;
+      transition: opacity 0.5s ease;
     }
     .logo:hover {
       opacity: 1;
@@ -85,6 +85,26 @@
       font-size: 0.9rem;
       color: #777;
     }
+
+    .mail {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      text-decoration: none;
+      color: var(--primary-color);
+      margin-left: 0.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .mail:hover {
+      color: #1a3c57;
+    }
+
+    .mail-icon {
+      font-family: 'Material Symbols Outlined';
+      font-size: 18px;
+      vertical-align: middle;
+    }
   </style>
 </head>
 <body>
@@ -102,6 +122,10 @@
     <footer>
       Tutela Paesaggio Sardegna<br>
       diVP © 2025
+      <a class="mail" href="mailto:tutelapaesaggiosardegna@gmail.com">
+        <span class="mail-icon">mail</span>
+        tutelapaesaggiosardegna@gmail.com
+      </a>
     </footer>
   </main>
 </body>
