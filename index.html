@@ -12,19 +12,18 @@
 
   <style>
     :root {
-      --primary-color: #2b5a83;
+      --primary-color: #2b5a83;   /* colore blu istituzionale */
       --text-color: #333333;
       --bg-color: #ffffff;
-      --raise: -10vh; /* alzare/abbassare il blocco variando questo valore */
+      --raise: -10vh; /* per alzare/abbassare il blocco */
     }
 
-    /* layout base */
     body {
       margin: 0;
       min-height: 100vh;
       display: flex;
-      align-items: center;      /* centratura orizzontale del contenuto */
-      justify-content: center;  /* centratura orizzontale */
+      align-items: center;
+      justify-content: center;
       background-color: var(--bg-color);
       color: var(--text-color);
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
@@ -32,7 +31,6 @@
       padding: 2rem;
     }
 
-    /* contenitore alzato verso l’alto */
     main {
       max-width: 420px;
       transform: translateY(var(--raise));
@@ -41,33 +39,33 @@
     h1 {
       font-size: clamp(22px, 3vw, 30px);
       color: var(--primary-color);
-      margin: 0 0 0.5rem 0;
-    }
-
-    h2 {
-      font-size: clamp(18px, 2.5vw, 22px);
-      color: #444;
-      margin: 0.5rem 0 1rem 0;
-    }
-
-    p {
-      font-size: clamp(16px, 2vw, 18px);
-      line-height: 1.6;
-      margin: 0;
+      margin: 0 0 0.75rem 0;
     }
 
     .icon {
       display: inline-block;
       font-family: 'Material Symbols Outlined';
-      font-size: 64px;
+      font-size: 68px;
       color: var(--primary-color);
-      margin: 0.25rem 0 0.75rem 0;
+      margin: 0.25rem 0 1.2rem 0; /* più spazio sotto il titolo */
       animation: spin 5s linear infinite;
     }
 
     @keyframes spin {
       from { transform: rotate(0deg); }
       to   { transform: rotate(360deg); }
+    }
+
+    h2 {
+      font-size: clamp(18px, 2.5vw, 22px);
+      color: var(--primary-color); /* stesso colore del titolo */
+      margin: 0 0 1rem 0;
+    }
+
+    p {
+      font-size: clamp(16px, 2vw, 18px);
+      line-height: 1.6;
+      margin: 0;
     }
 
     footer {
