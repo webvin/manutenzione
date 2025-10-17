@@ -18,10 +18,10 @@
       --footer-color: #777;
       --raise: -10vh;
 
-      /* —— Colori bottone —— */
-      --btn-bg: #8f99a3;       /* grigio medio, monocolore */
-      --btn-bg-hover: #7c8791; /* leggermente più scuro all'hover */
-      --btn-text: #ffffff;
+      /* —— Variabili bottone —— */
+      --btn-border: #8f99a3; /* grigio bordo/testo */
+      --btn-hover: #7c8791;  /* grigio più scuro all'hover */
+      --btn-active: #000000; /* nero al clic */
     }
 
     body {
@@ -84,22 +84,30 @@
       margin: 0 0 0.5rem 0;
     }
 
-    /* —— Bottone “Riprova” —— */
+    /* —— Bottone “Riprova” con bordo e testo grigi, senza riempimento —— */
     .btn {
       display: inline-block;
       margin-top: 1rem;
       padding: 0.75rem 1.25rem;
-      border-radius: 999px;          /* pill shape */
-      background: var(--btn-bg);
-      color: var(--btn-text);
+      border-radius: 999px;
+      background: transparent;                      /* nessun riempimento */
+      border: 2px solid var(--btn-border);          /* solo bordo */
+      color: var(--btn-border);                     /* testo grigio */
       text-decoration: none;
       font-weight: 600;
       letter-spacing: 0.02em;
-      transition: background-color 0.2s ease, transform 0.05s ease;
+      transition: border-color 0.2s ease, color 0.2s ease, transform 0.05s ease;
       user-select: none;
     }
-    .btn:hover { background: var(--btn-bg-hover); }
-    .btn:active { transform: translateY(1px); }
+    .btn:hover {
+      border-color: var(--btn-hover);
+      color: var(--btn-hover);
+    }
+    .btn:active {
+      border-color: var(--btn-active);              /* nero al clic */
+      color: var(--btn-active);                     /* nero al clic */
+      transform: translateY(1px);
+    }
     .btn:focus-visible {
       outline: 2px solid #222;
       outline-offset: 3px;
