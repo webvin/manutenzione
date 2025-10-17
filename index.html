@@ -15,14 +15,16 @@
       --primary-color: #2b5a83;
       --text-color: #333333;
       --bg-color: #ffffff;
+      --raise: -10vh; /* alzare/abbassare il blocco variando questo valore */
     }
 
+    /* layout base */
     body {
       margin: 0;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      align-items: center;      /* centratura orizzontale del contenuto */
+      justify-content: center;  /* centratura orizzontale */
       background-color: var(--bg-color);
       color: var(--text-color);
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
@@ -30,20 +32,22 @@
       padding: 2rem;
     }
 
+    /* contenitore alzato verso l’alto */
     main {
       max-width: 420px;
+      transform: translateY(var(--raise));
     }
 
     h1 {
       font-size: clamp(22px, 3vw, 30px);
       color: var(--primary-color);
-      margin-bottom: 0.25rem;
+      margin: 0 0 0.5rem 0;
     }
 
     h2 {
       font-size: clamp(18px, 2.5vw, 22px);
       color: #444;
-      margin-bottom: 1rem;
+      margin: 0.5rem 0 1rem 0;
     }
 
     p {
@@ -57,13 +61,13 @@
       font-family: 'Material Symbols Outlined';
       font-size: 64px;
       color: var(--primary-color);
-      margin-bottom: 1rem;
+      margin: 0.25rem 0 0.75rem 0;
       animation: spin 5s linear infinite;
     }
 
     @keyframes spin {
       from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+      to   { transform: rotate(360deg); }
     }
 
     footer {
@@ -75,11 +79,11 @@
 </head>
 <body>
   <main>
-    <span class="icon">settings</span>
     <h1>Tutela Paesaggio Sardegna</h1>
+    <span class="icon" aria-hidden="true">settings</span>
     <h2>Sito in manutenzione</h2>
-    <p>Stiamo lavorando per migliorare il servizio.<br>
-    Vi invitiamo a riprovare più tardi.</p>
+    <p>Si stanno effettuando aggiornamenti per migliorare il servizio.<br>
+    Si invita a riprovare più tardi.</p>
     <footer>© Tutela Paesaggio Sardegna</footer>
   </main>
 </body>
