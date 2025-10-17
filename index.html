@@ -15,6 +15,7 @@
       --primary-color: #2b5a83;
       --text-color: #333333;
       --bg-color: #ffffff;
+      --footer-color: #777;
       --raise: -10vh;
     }
 
@@ -82,16 +83,16 @@
     footer {
       margin-top: 2rem;
       font-size: 0.9rem;
-      color: #777;
+      color: var(--footer-color);
     }
 
     .mail {
       text-decoration: none;
-      color: var(--primary-color);
+      color: var(--footer-color); /* stesso colore del testo footer */
       transition: color 0.3s ease;
     }
     .mail:hover {
-      color: #1a3c57;
+      color: var(--primary-color);
     }
     .mail-icon {
       font-family: 'Material Symbols Outlined';
@@ -108,8 +109,8 @@
     <span class="icon" aria-hidden="true">settings</span>
     <h2>Sito in manutenzione</h2>
 
-    <p>Stiamo effettuando alcuni aggiornamenti per offrirle un servizio più performate ed efficiente.<br><br>
-    Il sito tornerà disponibile a breve.<br><br> Grazie per la comprensione!</p>
+    <p>Stiamo effettuando alcuni aggiornamenti per offrirle un servizio sempre migliore.<br>
+    Il sito tornerà disponibile a breve.</p>
 
     <footer>
       Tutela Paesaggio Sardegna<br>
