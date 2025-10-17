@@ -17,6 +17,11 @@
       --bg-color: #ffffff;
       --footer-color: #777;
       --raise: -10vh;
+
+      /* —— Colori bottone —— */
+      --btn-bg: #8f99a3;       /* grigio medio, monocolore */
+      --btn-bg-hover: #7c8791; /* leggermente più scuro all'hover */
+      --btn-text: #ffffff;
     }
 
     body {
@@ -79,6 +84,27 @@
       margin: 0 0 0.5rem 0;
     }
 
+    /* —— Bottone “Riprova” —— */
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.25rem;
+      border-radius: 999px;          /* pill shape */
+      background: var(--btn-bg);
+      color: var(--btn-text);
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: background-color 0.2s ease, transform 0.05s ease;
+      user-select: none;
+    }
+    .btn:hover { background: var(--btn-bg-hover); }
+    .btn:active { transform: translateY(1px); }
+    .btn:focus-visible {
+      outline: 2px solid #222;
+      outline-offset: 3px;
+    }
+
     footer {
       margin-top: 2rem;
       font-size: 0.9rem;
@@ -97,6 +123,13 @@
       font-size: 22px;
       vertical-align: middle;
     }
+
+    /* Rispetto delle preferenze di riduzione animazioni */
+    @media (prefers-reduced-motion: reduce) {
+      .icon { animation: none; }
+      .logo { transition: none; }
+      .btn { transition: none; }
+    }
   </style>
 </head>
 <body>
@@ -109,6 +142,14 @@
 
     <p>Stiamo effettuando alcuni aggiornamenti per offrirVi un servizio sempre migliore.<br><br>
     Il sito tornerà disponibile a breve.<br> Grazie per la comprensione!</p>
+
+    <!-- Bottone Riprova -->
+    <a class="btn"
+       href="https://www.tutelapaesaggiosardegna.info"
+       rel="noopener"
+       aria-label="Riprova ad aprire il sito Tutela Paesaggio Sardegna">
+       Riprova
+    </a>
 
     <footer>
       Tutela Paesaggio Sardegna<br>
